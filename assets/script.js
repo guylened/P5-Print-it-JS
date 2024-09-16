@@ -1,3 +1,22 @@
+
+const arrowLft = document.getElementById("arrowlft");
+arrowLft.addEventListener("click", myFunction1);
+
+function myFunction1() {
+  document.getElementById("banner").innerHTML = "Hello World";
+}
+
+const arrowRgt = document.getElementById("arrowrgt");
+arrowRgt.addEventListener("click", myFunction2);
+
+function myFunction2() {
+  document.getElementById("banner").innerHTML = "Hello World";
+}
+
+
+
+
+
 const slides = [
 	{
 		"image":"slide1.jpg",
