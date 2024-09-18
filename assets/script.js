@@ -1,31 +1,45 @@
-const buttons = document.querySelectorAll(".arrow");
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
+const btnPrev = document.getElementById("prev")
+const btnNext = document.getElementById("next")
 
-buttons.forEach((btn) => {
-	btn.addEventListener("click", (e) => {		
-		const calcNextSlide = e.target.id === "next" ? 1 : -1;
-		const SlideActive = document.querySelector(".slide-selected");		
-		const DotActive = document.querySelector(".dot-selected");
-		NewSlideIndex = calcNextSlide + [...slides].indexOf(SlideActive);
-		NewDotIndex = calcNextSlide + [...dots].indexOf(DotActive);
+console.log({slides});
 
-		if(NewSlideIndex < 0) NewSlideIndex = [...slides].length - 1;
-		if(NewSlideIndex >= [...slides].length) NewSlideIndex = 0
-		slides[NewSlideIndex].classList.add("slide-selected");
-		SlideActive.classList.remove("slide-selected");
+// initialisation du compteur / de l'index
+let indexCurrent = 0;
+let slidesLength = slides.length -1;
 
-		if(NewDotIndex < 0) NewDotIndex = [...slides].length - 1;
-		if(NewDotIndex >= [...slides].length) NewDotIndex = 0
-		dots[NewDotIndex].classList.add("dot-selected");
-		DotActive.classList.remove("dot-selected");
-		
-		
+function updateSlides() {
+	slideActive.classList.remove("slide-selected");
+	dotActive.classList.remove("dot-selected");
+	slides[indexCurrent].classList.add("slide-selected");
+	dots[indexCurrent].classList.add("dot-selected");
+}
 
-		
-	})
+// le trigger lorsqu'on veut la slide précédente
+btnPrev.addEventListener("click", function() {
+	const slideActive = document.querySelector(".slide-selected");		
+	const dotActive = document.querySelector(".dot-selected");
 
-
+	indexCurrent--;
+	
+	if (indexCurrent < 0) {
+		indexCurrent = slidesLength;
+	}
+	
+	updateSlides();
 })
 
 
+btnNext.addEventListener("click", function() {
+	const slideActive = document.querySelector(".slide-selected");		
+	const dotActive = document.querySelector(".dot-selected");
+
+	indexCurrent++;
+	
+	if (indexCurrent > slidesLength) {
+		indexCurrent = 0 ;
+	}
+	
+	updateSlides();
+})
