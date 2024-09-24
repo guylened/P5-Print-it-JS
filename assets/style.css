@@ -162,27 +162,6 @@ header {
 	right: 10px;
 }
 
-
-/* Gestion des points du carrousel */
-.dots {
-	position: absolute;
-	bottom: 40px;
-	display: flex;
-}
-.dot {
-	margin-inline: 5px;
-	width: 13px;
-	height: 13px;
-	background-color: #ffffff00;
-	border: 3px solid #fff;
-	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-	cursor: pointer;
-}
-.dot-selected {
-	background-color: #fff;
-}
-
 #banner p {
 	display: block;	
 	position: relative;
@@ -204,6 +183,27 @@ header {
 	font-weight: 400;
 	font-size: 30px;
 }
+
+/* Gestion des points du carrousel */
+.dots {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+}
+.dot {
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+.dot-selected {
+	background-color: #fff;
+}
+
 
 /* Fin du code CSS pour le carousel */
 
