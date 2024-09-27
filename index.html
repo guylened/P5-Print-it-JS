@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="container">
@@ -17,25 +17,11 @@
 	<a class="btn devis" href="mailto:contact@print-it.tld">Devis</a>
 </header>
 <main>
-	<div id="banner">		
-		<ul class="slides">
-			<li class="slide slide-selected">
-				<img class="slide-img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
-				<p>Impressions tous formats <span>en boutique et en ligne</span></p>
-			</li>
-			<li class="slide">
-				<img class="slide-img" src="./assets/images/slideshow/slide2.jpg" alt="Banner Print-it">
-				<p>Tirages haute définition </br> grand format <span>pour vos bureaux et events</span></p>
-			</li>
-			<li class="slide">
-				<img class="slide-img" src="./assets/images/slideshow/slide3.jpg" alt="Banner Print-it">
-				<p>Grand choix de couleurs <span>de CMJN aux pantones</span></p>
-			</li>
-			<li class="slide">
-				<img class="slide-img" src="./assets/images/slideshow/slide4.png" alt="Banner Print-it">
-				<p>Autocollants <span>avec découpe laser sur mesure</span></p>
-			</li>
-		</ul>
+	<div id="banner">
+		<div class="slide">
+		<img id="imgslide" class="banner-img" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
+		<p id="pslide">Impressions tous formats <span>en boutique et en ligne</span></p>
+		</div>
 		<button class="arrow" id="prev">
 			<img src="./assets/images/arrow_left.png" alt="flèche gauche du carrousel">
 		</button>
@@ -43,10 +29,10 @@
 			<img src="./assets/images/arrow_right.png" alt="flèche droite du carrousel">
 		</button>		
 		<ul class="dots">
-			<li class="dot dot-selected" id="dot1"></li>
-			<li class="dot" id="dot2"></li>
-			<li class="dot" id="dot3"></li>
-			<li class="dot" id="dot4"></li>
+			<li class="dot dot-selected"></li>
+			<li class="dot"></li>
+			<li class="dot"></li>
+			<li class="dot"></li>
 		</ul>
 	</div>
 	<section id="about-us" class="container">
